@@ -1,0 +1,117 @@
+<h1>Add Invoice</h1>
+<form method="POST" action="/api/sales">
+    <div id="form-group">
+        <div>
+            <label for="invoiceID">Invoice ID:</label>
+            <input class="form-control" name="invoiceID" type="text" id="invoiceID">
+        </div>
+
+        <div>
+            <label for="branch">Branch:</label>
+            <input class="form-control" name="branch" type="text" id="branch">
+        </div>   
+
+        <div>
+            <label for="city">City:</label>
+            <input class="form-control" name="city" type="text" id="city">
+        </div>
+
+        <div>
+            <label for="customerType">Customer Type:</label>
+            <input class="form-control" name="customerType" type="text" id="customerType">
+        </div>
+
+        <div>
+            <label for="productLine">Product Line:</label>
+            <input class="form-control" name="productLine" type="text" id="productLine">
+        </div>
+
+        <div>
+            <label for="name">Name:</label>
+            <input class="form-control" name="name" type="text" id="name">
+        </div>
+
+        <div>
+            <label for="image">Image:</label>
+            <input class="form-control" name="image" type="text" id="image">
+        </div>
+
+        <div>
+            <label for="unitPrice">Unit Price:</label>
+            <input class="form-control" name="unitPrice" type="text" id="unitPrice">
+        </div>
+
+        <div>
+            <label for="quantity">Quanity:</label>
+            <input class="form-control" name="quantity" type="text" id="quantity">
+        </div>
+
+        <div>
+            <label for="tax">Tax:</label>
+            <input class="form-control" name="tax" type="text" id="tax">
+        </div>
+
+        <div>
+            <label for="total">Total:</label>
+            <input class="form-control" name="total" type="text" id="total">
+        </div>
+
+        <div>
+            <label for="date">Date:</label>
+            <input class="form-control" name="date" type="text" id="date">
+        </div>
+
+        <div>
+            <label for="time">Time:</label>
+            <input class="form-control" name="time" type="text" id="time">
+        </div>
+
+        <div>
+            <label for="payment">Payment:</label>
+            <input class="form-control" name="payment" type="text" id="payment">
+        </div>
+
+        <div>
+            <label for="cogs">Cogs:</label>
+            <input class="form-control" name="cogs" type="text" id="cogs">
+        </div>
+
+        <div>
+            <label for="grossIncome">Gross Income:</label>
+            <input class="form-control" name="grossIncome" type="text" id="grossIncome">
+        </div>
+
+        <div>
+            <label for="rating">Rating:</label>
+            <input class="form-control" name="rating" type="text" id="rating">
+        </div>
+    </div>
+
+    {{!-- <div id="form-group">
+        <label for="author">Author:</label>
+        <input class="form-control" name="author" type="text" id="author">
+    </div>
+
+    <div id="form-group">
+        <label for="pages">Pages:</label>
+        <input class="form-control" name="pages" type="number" id="pages">
+    </div>
+
+    <div id="form-group">
+        <label>Genres:</label>
+        <!-- Loop through genres to assign values to checkboxes -->
+        {{#each genres}}
+        <div>
+            <input class="form-control" name="genres" type="checkbox" value="{{this}}">
+            <label>{{this}}</label>
+        </div>
+        {{/each}}
+    </div>
+
+    <div id="form-group">
+        <label for="rating">Rating:</label>
+        <input class="form-control" name="rating" type="number" id="rating">
+    </div> --}}
+
+    <input class="btn btn-primary" type="submit" value="Submit">
+</form>
