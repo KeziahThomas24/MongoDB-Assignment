@@ -1,3 +1,14 @@
+/********************************************************************************* 
+* ITE5315 – Assignment 4 
+* I declare that this assignment is my own work in accordance with Humber Academic Policy. 
+* No part of this assignment has been copied manually or electronically from any other source 
+* (including web sites) or distributed to other students. 
+* 
+* Name: Keziah Thomas Student ID: N01541155 Date: 25/11/23 
+* 
+* 
+********************************************************************************/ 
+
 var express  = require('express');
 var mongoose = require('mongoose');
 var app      = express();
@@ -14,7 +25,7 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse applica
 app.engine('.hbs', exphbs.engine({ extname: '.hbs',}));
 app.set('view engine', '.hbs');
 
-mongoose.connect(database.url1);
+await mongoose.connect(database.url1);
 
 var Sales = require('./models/sales');
  
