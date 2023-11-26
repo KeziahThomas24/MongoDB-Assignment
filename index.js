@@ -25,7 +25,17 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse applica
 app.engine('.hbs', exphbs.engine({ extname: '.hbs',}));
 app.set('view engine', '.hbs');
 
-await mongoose.connect(database.url1);
+// mongoose.connect(database.url1);
+
+const connectDB = async () => {
+	try {
+	  const conn = await mongoose.connect(database.url1);
+	  console.log(`MongoDB Connected: ${conn.connection.host}`);
+	} catch (error) {
+	  console.log(error);
+	  process.exit(1);
+	}
+  }
 
 var Sales = require('./models/sales');
  
@@ -186,7 +196,12 @@ app.get('/api/sales/sort/:sortParam', function(req, res) {
 });
 
 
+// app.listen(port);
+// console.log("App listening on port : " + port);
 
-
-app.listen(port);
-console.log("App listening on port : " + port);
+//Connect to the database before listening
+connectDB().then(() => {
+    app.listen(port, () => {
+        console.log("App listening on port : " + port);
+    })
+})
