@@ -29,8 +29,8 @@ app.set('view engine', '.hbs');
 
 const connectDB = async () => {
 	try {
-	//   const conn = await mongoose.connect(database.url1);
-	  const conn = await mongoose.connect(process.env.MONGO_CONNECTION_STRING);
+	  const conn = await mongoose.connect(database.url1);
+	//   const conn = await mongoose.connect(process.env.MONGO_CONNECTION_STRING);
 	  console.log(`MongoDB Connected: ${conn.connection.host}`);
 	} catch (error) {
 	  console.log(error);
@@ -69,7 +69,7 @@ app.get('/api/sales/:invoice_id', function(req, res) {
  
 });
 
-app.get('/api/sales/add', function(req,res){
+app.get('/api/addSales', function(req,res){
 	res.render("addData", {
 		layout: false
 	});
